@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <title>Ajax Wireless Alarm Starter Kit - Amatron</title>
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Ajax Wireless Alarm Starter Kit - Amatron">
+    <meta property="og:url" content="https://amatron.co.za/ajax-wireless-alarm-starter-kit/">
+    <meta property="og:site_name" content="Amatron">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="dns-prefetch" href="//www.google.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap" rel="stylesheet">
+    <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"
+        type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        WebFont.load({
+            google: {
+                families: ['Roboto']
+            }
+        });
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('load', function () {
+            var observer = lozad()
+            observer.observe()
+        })
+    </script>
+</head>
+
+<body>
+    <style>
+        /* RESET * /
+        a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+        /* RESET */
+        html,
+        body {
+            margin: 0 !important;
+            font-family: 'Roboto', sans-serif;
+            color: #3E4348;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        #login-popup {
+            display: none;
+        }
+
+        /* HIDE ADD TO CART POPUP MAKER UPSELL */
+        #pum-6112 {
+            display: none;
+        }
+
+        /* HIDE ADD TO CART POPUP MAKER UPSELL */
+
+        .g-container {
+            max-width: 1440px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .g-container-xs {
+            max-width: 960px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .b-header {
+            display: flex;
+            flex-direction: column;
+            padding: 25px 15px 25px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media screen and (min-width: 768px) {
+            .b-header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .b-header .e-logo {
+            max-width: 270px;
+            width: auto;
+        }
+
+        .b-header .e-number {
+            padding: 15px 0;
+            color: #F04E25;
+            text-decoration: none;
+            font-size: 22px;
+        }
+
+        .b-header .e-icon {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .g-grey-background {
+            background-color: #ECEEF1;
+        }
+
+
+        .b-hero {
+            padding-top: 50px;
+        }
+
+        .b-hero .e-headlines {
+            text-align: center;
+            padding: 0 15px;
+        }
+
+        .b-hero h1 {
+            margin: 10px 0 0;
+            font-size: 32px;
+        }
+
+        .b-hero h3 {
+            margin: 0;
+            font-weight: 400;
+        }
+
+        @media screen and (min-width: 768px) {
+            .b-hero h1 {
+                font-size: 44px;
+            }
+        }
+
+        .b-hero .e-logo {
+            margin: 15px 0 5px;
+            max-width: 190px;
+        }
+
+        .b-hero .e-product {
+            display: flex;
+            flex-direction: column;
+            padding: 0 15px;
+            align-items: center;
+        }
+
+        .b-hero .e-image {}
+
+        .b-hero .e-description {
+            font-size: 18px;
+            line-height: 158.7%;
+            color: #898D92;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        @media screen and (min-width: 768px) {
+            .b-hero .e-product {
+                flex-direction: row;
+            }
+
+            .b-hero .e-image {
+                flex-basis: 60%;
+            }
+
+            .b-hero .e-description {
+                flex-basis: 40%;
+                text-align: left;
+            }
+        }
+
+        @media screen and (min-width: 991px) {
+            .b-hero .e-product {
+                flex-direction: row;
+            }
+
+            .b-hero .e-image {
+                flex-basis: 75%;
+            }
+
+            .b-hero .e-description {
+                flex-basis: 25%;
+                text-align: left;
+            }
+        }
+
+        .b-hero .e-product-image {
+            max-width: 100%;
+        }
+
+        .b-buy .e-price-btn {
+            display: flex;
+            color: #fff;
+            margin: 25px 0 10px;
+            justify-content: center;
+        }
+
+        @media screen and (min-width: 768px) {
+            .b-buy .e-price-btn {
+                justify-content: flex-start;
+            }
+
+            .b-buy .e-price-btn.m-centered {
+                justify-content: center;
+            }
+        }
+
+        .b-buy .e-price {
+            margin-right: 2px;
+            background-color: rgba(240, 78, 37, 0.7);
+            border-radius: 5px 0 0 5px;
+            font-size: 23px;
+            line-height: 158%;
+            font-weight: 700;
+            padding: 7px 20px;
+        }
+
+        .b-buy .e-buy-btn {
+            border: none;
+            margin: 0;
+            padding: 0;
+            width: auto;
+            overflow: visible;
+
+            background: transparent;
+
+            /* inherit font & color from ancestor */
+            color: inherit;
+            font: inherit;
+
+            /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+            line-height: normal;
+
+            /* Corrects font smoothing for webkit */
+            -webkit-font-smoothing: inherit;
+            -moz-osx-font-smoothing: inherit;
+
+            /* Corrects inability to style clickable `input` types in iOS */
+            -webkit-appearance: none;
+
+            margin-left: 2px;
+            background-color: #F04E25;
+            border-radius: 0 5px 5px 0;
+            font-size: 23px;
+            line-height: 158%;
+            padding: 7px 20px;
+            cursor: pointer;
+            transition: transform ease 0.3s;
+            text-decoration: none;
+        }
+
+        .b-buy .e-buy-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .b-buy .e-buy-btn img {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+            vertical-align: sub;
+        }
+
+        .b-buy .e-shipping {
+            color: #F04E25;
+            font-size: 20px;
+            display: block;
+        }
+
+        .b-buy .e-shipping img {
+            width: 37px;
+            height: 37px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+    </style>
+    <?php $uploads = wp_upload_dir(); ?>
+    <div class="g-grey-background">
+        <div class="b-hero g-container">
+            <div class="e-headlines">
+                <img data-src="https://amatron.co.za/wp-content/uploads/2018/11/ajax-systems.png"
+                    class="e-logo lozad" />
+                <h1>Wireless Alarm Starter Kit</h1>
+            </div>
+            <div class="e-product">
+                <div class="e-image">
+                    <img data-src="https://amatron.co.za/wp-content/uploads/2018/11/starter-kit-product.png"
+                        class="e-product-image lozad" />
+                </div>
+                <div class="e-description">
+                    Ajax systems brings the latest technology in wireless alarms to South Africa. The design allows you
+                    to have full control of the system from your smartphone.
+                    <div class="b-buy">
+                        <div class="e-price-btn">
+                            <div class="e-price">R 4,750</div>
+                            <a href="<?php echo get_site_url(); ?>/cart/?add-to-cart=5802" class="e-buy-btn"><img
+                                    data-src="https://amatron.co.za/wp-content/uploads/2018/11/buy-icon.png"
+                                    class="lozad" />Buy Now</a>
+                        </div>
+                        <span class="e-shipping"><img
+                                data-src="https://amatron.co.za/wp-content/uploads/2018/11/shipping-icon.png"
+                                class="lozad" />Free Shipping in SA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .b-features {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            padding: 35px 15px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .b-features {
+                flex-direction: row;
+            }
+        }
+
+        .b-features .e-feature {
+            display: flex;
+            padding: 15px 0;
+        }
+
+        .b-features .e-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 67px;
+            min-width: 67px;
+            width: 67px;
+            height: 67px;
+            border: 2px solid #F04E25;
+            border-radius: 50%;
+            margin: 0 15px;
+        }
+
+        .b-features .e-icon img {
+            width: 60%;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .b-features .e-description {
+            font-size: 18px;
+            line-height: 164%;
+        }
+
+        .b-features h3 {
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .b-features p {
+            color: #898D92;
+            margin: 0;
+        }
+    </style>
+    <div class="b-features g-container">
+        <div class="e-feature">
+            <div class="e-icon">
+                <img data-src="https://amatron.co.za/wp-content/uploads/2018/11/wireless-icon.png" class="lozad" />
+            </div>
+            <div class="e-description">
+                <h3>Wireless</h3>
+                <p>The Ajax system is completely wireless, making it easy to self-install with no unsightly wires.</p>
+            </div>
+        </div>
+        <div class="e-feature">
+            <div class="e-icon">
+                <img data-src="https://amatron.co.za/wp-content/uploads/2018/11/smartphone-icon.png" class="lozad" />
+            </div>
+            <div class="e-description">
+                <h3>App Based</h3>
+                <p>Control and monitor the health of the entire system from your smartphone App.</p>
+            </div>
+        </div>
+        <div class="e-feature">
+            <div class="e-icon">
+                <img data-src="https://amatron.co.za/wp-content/uploads/2018/11/qr-icon.png" class="lozad" />
+            </div>
+            <div class="e-description">
+                <h3>Quick & easy to install</h3>
+                <p>Simply scan the QR code on each device with your smartphone and mount it with supplied screws.</p>
+            </div>
+        </div>
+    </div>
+    <style>
+        .g-black-background {
+            background-color: #000;
+        }
+
+        .b-video {
+            position: relative;
+        }
+
+        .b-video .e-unmute img {
+            width: 23px;
+            height: 23px;
+            vertical-align: middle;
+        }
+
+        .b-video .e-unmute {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #000;
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: #fff;
+            padding: 7px 15px;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        .b-video .e-unmute span {
+            display: none;
+        }
+
+        @media screen and (min-width: 768px) {
+            .b-video .e-unmute {
+                top: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 20px;
+            }
+
+            .b-video .e-unmute img {
+                margin-right: 10px;
+            }
+
+            .b-video .e-unmute span {
+                display: inline;
+            }
+        }
+
+        .b-video video {
+            width: 100%;
+        }
+    </style>
+    <div class="g-black-background">
+        <div class="b-video g-container">
+            <div id="mute" class="e-unmute">
+                <img data-src="https://amatron.co.za/wp-content/uploads/2018/11/unmute-icon.png"
+                    class="lozad" /><span>UNMUTE FOR SOUND</span>
+            </div>
+            <video id="video" controls autoplay muted>
+                <source
+                    src="https://amatron.co.za/wp-content/uploads/2018/11/Ajax.-The-new-generation-of-wireless-security-systems.webm"
+                    type="video/webm">
+                <source
+                    src="https://amatron.co.za/wp-content/uploads/2018/11/Ajax.-The-new-generation-of-wireless-security-systems.mp4"
+                    type="video/mp4">
+            </video>
+            <script>
+                var button = document.getElementById('mute');
+                var video = document.getElementById('video');
+                button.onclick = function () {
+                    video.muted = false;
+                    button.parentNode.removeChild(button);
+                };
+            </script>
+        </div>
+    </div>
+    <div class="b-features g-container">
+        <div class="e-feature">
+            <div class="e-icon">
+                <img data-src="https://amatron.co.za/wp-content/uploads/2018/11/scalable-icon.png" class="lozad" />
+            </div>
+            <div class="e-description">
+                <h3>22 Products</h3>
+                <p>The system is completely scalable. Add devices from Ajax’s product range as your requirements change.
+                </p>
+            </div>
+        </div>
+        <div class="e-feature">
+            <div class="e-icon">
+                <img data-src="https://amatron.co.za/wp-content/uploads/2018/11/self-icon.png" class="lozad" />
+            </div>
+            <div class="e-description">
+                <h3>Monitoring</h3>
+                <p>Link the Ajax system to an armed response company or monitor it yourself.</p>
+            </div>
+        </div>
+        <div class="e-feature">
+            <div class="e-icon">
+                <img data-src="https://amatron.co.za/wp-content/uploads/2018/11/geofence-icon.png" class="lozad" />
+            </div>
+            <div class="e-description">
+                <h3>Geofence</h3>
+                <p>Get notified on the App when you leave your home without arming it. A panic activation on the App
+                    sends your exact location to other users.</p>
+            </div>
+        </div>
+    </div>
+    <style>
+        .g-dark-grey-background {
+            background-color: #6b6a6a;
+        }
+
+        .b-product-intro {
+            position: relative;
+            color: #fff;
+            padding: 70px 15px;
+            font-size: 22px;
+            line-height: 164%;
+            text-align: center;
+            font-weight: 300;
+        }
+
+        .b-product-intro:after {
+            content: '';
+            position: absolute;
+            width: 70%;
+            border-bottom: 2px dashed rgba(255, 255, 255, 0.25);
+            bottom: 0;
+            left: 15%;
+        }
+
+        .b-product-intro.m-bottom:after {
+            bottom: 100%;
+        }
+
+        .b-product-intro h3 {
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 164%;
+            margin: 0 0 10px;
+            text-transform: uppercase;
+        }
+
+        .b-product-intro a {
+            text-decoration: none;
+            color: #F04E25;
+            font-weight: 700;
+        }
+
+        .b-product {
+            padding: 30px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media screen and (min-width: 768px) {
+            .b-product {
+                flex-direction: row;
+            }
+        }
+
+        .b-product .e-thumb {
+            width: 300px;
+            flex-basis: 300px;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .b-product .e-thumb img {
+            height: 200px;
+        }
+
+        .b-product .e-description {
+            color: #fff;
+        }
+
+        .b-product .e-description h3 {
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 164%;
+            margin: 0;
+        }
+
+        .b-product .e-description p {
+            margin: 0;
+            font-size: 18px;
+            line-height: 164%;
+        }
+    </style>
+    <div class="g-dark-grey-background">
+        <div class="g-container">
+            <div class="b-product-intro g-container-xs">
+                <h3>Product Info</h3>
+                The starter kit is the quickest and easiest way to get your Ajax alarm system up and running. Once you
+                have installed it yourself, you have the option to add a further 97 devices from the Ajax product range.
+                These include outdoor sensors, sirens, keypads, smart home relays, glass break, fire and leak detectors.
+                The starter kit consists of:
+            </div>
+            <div class="b-product">
+                <div class="e-thumb">
+                    <img data-src="https://amatron.co.za/wp-content/uploads/2018/11/hub-product.png" class="lozad" />
+                </div>
+                <div class="e-description">
+                    <h3>1 x Hub</h3>
+                    <p>The Ajax Hub can take up to 100 devices and has up to 15 hours of power from the backup battery.
+                        The signal to your smartphone App and monitoring company is sent via the internet and/or sim
+                        card. Simply plug the hub into your router with the 1m ethernet cable provided (sim card not
+                        included). The Hub can take 50 uses, 9 patricians and connect to 10 cameras.</p>
+                </div>
+            </div>
+            <div class="b-product">
+                <div class="e-thumb">
+                    <img data-src="https://amatron.co.za/wp-content/uploads/2018/11/sensor-product.png" class="lozad" />
+                </div>
+                <div class="e-description">
+                    <h3>1 x MotionProtect</h3>
+                    <p>The MotionProtect uses a passive infrared sensor to detect human presence. It is "pet-friendly"
+                        and ignores cats and dogs with a weight of up to 20 kg and height up to 50 cm.
+                    </p>
+                </div>
+            </div>
+            <div class="b-product">
+                <div class="e-thumb">
+                    <img data-src="https://amatron.co.za/wp-content/uploads/2018/11/door-product.png" class="lozad" />
+                </div>
+                <div class="e-description">
+                    <h3>1 x DoorProtect</h3>
+                    <p>The DoorProtect is a wireless opening detector that notifies you of any unauthorized window or
+                        door openings. It can be mounted on all types of doors including metal.</p>
+                </div>
+            </div>
+            <div class="b-product">
+                <div class="e-thumb">
+                    <img data-src="https://amatron.co.za/wp-content/uploads/2018/11/remote-product-1.png"
+                        class="lozad" />
+                </div>
+                <div class="e-description">
+                    <h3>1 x SpaceControl</h3>
+                    <p>The SpaceControl is a lightweight remote. It has an alarm on, alarm off, stay and panic button.
+                        Perfect for lending to guests/employees or use it as a back-up if your phone battery dies.</p>
+                </div>
+            </div>
+            <div class="b-product">
+                <div class="e-thumb">
+                    <img data-src="https://amatron.co.za/wp-content/uploads/2018/11/app-product.png" class="lozad" />
+                </div>
+                <div class="e-description">
+                    <h3>App</h3>
+                    <p>The app sounds a siren on your phone when the alarm goes off. It also essential replaces the old
+                        keypads. The App gives you full control of your system. Amongst other features, you can turn the
+                        alarm on and off, check the signal and battery strengths, adjust sensor sensitivity and alter
+                        the siren volume. With the new SmartSocket, you can even turn on the kettle.</p>
+                </div>
+            </div>
+            <div class="b-product-intro m-bottom g-container-xs">
+                <strong>PLEASE NOTE:</strong> In South Africa, Ajax hubs can currently be monitored by Fidelity ADT.
+                More armed response companies are continuously being added.
+                For the full list of arm response companies in SA that can monitor Ajax hubs, please email us on <a
+                    href="mailto:info@amatron.co.za?subject=Armed Response Companies that monitor Ajax hubs">info@amatron.co.za</a>
+            </div>
+        </div>
+    </div>
+    <style>
+        .b-company {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 40px 15px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .b-company {
+                flex-direction: row;
+            }
+        }
+
+        .b-company .e-logo {
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .b-company .e-description h2 {
+            margin-top: 0;
+        }
+
+        .b-company .e-description {
+            font-size: 18px;
+            line-height: 158.7%;
+            color: #898D92;
+            padding: 20px 15px;
+            max-width: 800px;
+        }
+    </style>
+    <div class="g-grey-background">
+        <div class="b-company g-container">
+            <img data-src="https://amatron.co.za/wp-content/uploads/2018/11/Logo-Light-1.png" class="e-logo lozad" />
+            <div class="e-description">
+                <h2>About Amatron</h2>
+                Amatron is South Africa’s leading online supplier of Ajax wireless alarm systems. Based in the mother
+                city, we deliver to customers all over our beautiful country with the help of our trusted courier
+                partners. Amatron specializes in high quality, robust and technology-driven security systems for the
+                South African market. Our products can be self-installed and ideal for clients who want to self-monitor
+                their properties. Our mission is to deliver unequalled customer service and satisfaction to our clients.
+            </div>
+        </div>
+    </div>
+    <style>
+        .b-payments {
+            display: flex;
+            padding: 40px 15px;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        @media screen and (min-width: 768px) {
+            .b-payments {
+                flex-direction: row;
+            }
+        }
+
+        .b-payments .e-description {
+            font-size: 18px;
+            line-height: 158.7%;
+            color: #898D92;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        @media screen and (min-width: 768px) {
+            .b-payments .e-description {
+                margin-right: 20px;
+            }
+
+            .b-payments .e-payments {
+                margin-left: 20px;
+            }
+
+            .b-payments .e-description,
+            .b-payments .e-payments {
+                max-width: 50%;
+            }
+        }
+
+        .b-payments .e-payments h2 {
+            margin-top: 0;
+        }
+
+        .b-payments .e-payments img {
+            width: 348px;
+        }
+
+        .b-services {
+            display: flex;
+            padding: 0 15px 45px;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        @media screen and (min-width: 768px) {
+            .b-services {
+                flex-direction: row;
+            }
+        }
+
+        .b-services .e-service {
+            flex-basis: 30%;
+            border: 1px solid #F04E25;
+            border-radius: 5px;
+            padding: 15px;
+            box-sizing: border-box;
+            margin: 15px 0;
+        }
+
+        .b-services h3 {
+            color: #F04E25;
+            margin-top: 0;
+        }
+
+        .b-services p {
+            line-height: 164%;
+            color: #6A6C6F;
+        }
+
+        .b-services p span {
+            display: block;
+            line-height: 1.2;
+            font-size: 13px;
+            margin-top: 10px;
+            color: #F04E25;
+            font-style: italic;
+        }
+    </style>
+    <div class="g-container-xs">
+        <div class="b-payments">
+            <div class="e-description">
+                Protecting your property with the Ajax starter kit, gives you the option to customize your security by
+                adding more devices.
+                <div class="b-buy">
+                    <div class="e-price-btn m-centered">
+                        <div class="e-price">R 4,750</div>
+                        <a href="<?php echo get_site_url(); ?>/cart/?add-to-cart=5802" class="e-buy-btn"><img
+                                data-src="https://amatron.co.za/wp-content/uploads/2018/11/buy-icon.png"
+                                class="lozad" />Buy Now</a>
+                    </div>
+                    <span class="e-shipping"><img
+                            data-src="https://amatron.co.za/wp-content/uploads/2018/11/shipping-icon.png"
+                            class="lozad" />Free Shipping in SA</span>
+                </div>
+            </div>
+            <div class="e-payments">
+                <h2>Secure Payments</h2>
+                <img data-src="https://amatron.co.za/wp-content/uploads/2018/11/payment-gateways.png" class="lozad" />
+            </div>
+        </div>
+        <div class="b-services">
+            <div class="e-service">
+                <h3>Delivery</h3>
+                <p>We deliver free of charge to our customers in SA. Delivery is generally within 2-5 working days,
+                    depending on your location.</p>
+            </div>
+            <div class="e-service">
+                <h3>Warranty</h3>
+                <p>The warranty for Ajax devices is valid for two years after the purchase date and does not apply to
+                    the supplied battery.</p>
+            </div>
+            <div class="e-service">
+                <h3>Returns policy</h3>
+                <p>Not the right item? Amatron has a return policy of 14 days from the delivery date. <span>Please note,
+                        returned products with damaged packaging cannot be swapped or refunded.</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <script src="" async defer></script>
+</body>
+
+</html>
