@@ -550,6 +550,127 @@
         </div>
     </div>
     <style>
+        .b-testimonial-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+
+        }
+
+        @media (min-width: 768px) {
+            .b-testimonial-section {
+                padding: 50px;
+            }
+        }
+
+        .b-testimonial-section h3 {
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 164%;
+            margin: 0 0 15px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .b-testimonial-section .e-testimonials {
+            display: flex;
+            gap: 20px;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+            .b-testimonial-section .e-testimonials {
+                flex-direction: row;
+            }
+        }
+
+        .b-testimonial-section .e-testimonial {
+            flex-basis: calc(100% / 3);
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .b-testimonial-section .e-testimonial {
+                margin-bottom: 0;
+            }
+        }
+
+        .b-testimonial-section .e-copy {
+            padding: 15px;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .b-testimonial-section .e-copy img {
+            max-width: 20px;
+            margin-bottom: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .b-testimonial-section .e-copy {
+                min-height: 160px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .b-testimonial-section .e-copy {
+                min-height: 148px;
+            }
+        }
+
+        .b-testimonial-section .e-name {
+            font-weight: 700;
+        }
+
+        .b-testimonial-section .e-position {}
+    </style>
+    <div>
+        <div class="b-testimonial-section g-container">
+            <h3>What the professionals say</h3>
+            <div class="e-testimonials">
+                <div class="e-testimonial">
+                    <div class="e-copy">
+                        <div><img src="/images/star-icon.svg" /> <img src="/images/star-icon.svg" /> <img
+                                src="/images/star-icon.svg" /> <img src="/images/star-icon.svg" /> <img
+                                src="/images/star-icon.svg" /></div>
+                        We use the Ambrac 180 degree swivel brackets for all our Ajax installations. The universal
+                        bracket helps our technicians install the Ajax outdoor sensors at the perfect angle. It is a
+                        solid, well-made product with quality supporting hardware.
+                    </div>
+                    <div class="e-name">Marc Puzey</div>
+                    <div class="e-position">Synergy Solutions - Director</div>
+                </div>
+                <div class="e-testimonial">
+                    <div class="e-copy">
+                        <div><img src="/images/star-icon.svg" /> <img src="/images/star-icon.svg" /> <img
+                                src="/images/star-icon.svg" /> <img src="/images/star-icon.svg" /> <img
+                                src="/images/star-icon.svg" /></div>
+                        An absolutely brilliant product. High quality, versatile, easy to fit and adjust. Simply the
+                        best universal bracket for Ajax outdoor sensors on the market, hands down.
+                    </div>
+                    <div class="e-name">David Romburgh</div>
+                    <div class="e-position">Multisafe – Owner</div>
+                </div>
+                <div class="e-testimonial">
+                    <div class="e-copy">
+                        <div><img src="/images/star-icon.svg" /> <img src="/images/star-icon.svg" /> <img
+                                src="/images/star-icon.svg" /> <img src="/images/star-icon.svg" /> <img
+                                src="/images/star-icon.svg" /></div>
+                        We find the bracket extremely useful in that it gives enough space for the sensor to pass over
+                        gutters. The swivel gives a perfect angle for the Ajax outdoor sensors to avoid certain
+                        obstacles.
+                    </div>
+                    <div class="e-name">Haylett Botha</div>
+                    <div class="e-position">iTree Connection - Director</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
         .g-dark-grey-background {
             background-color: #6b6a6a;
         }
