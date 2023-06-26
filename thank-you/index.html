@@ -903,14 +903,40 @@
             font-size: 24px;
         }
 
-        .b-where-to-buy .e-content img {}
+        .b-where-to-buy .e-content .e-images {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .b-where-to-buy .e-content .e-images a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .b-where-to-buy .e-content .e-images a span {
+            color: #b3b3b3;
+            font-size: 13px;
+        }
+
+        .b-where-to-buy .e-content .e-images a:hover span {
+            color: #7d7d7d;
+        }
     </style>
     <div class="b-where-to-buy">
         <div class="g-container">
             <div class="e-content">
                 <h2>Where to buy</h2>
-                <a href="https://www.elvey.co.za/" target="_blank"><img src="/images/elvey-logo.png" width="200"
-                        height="200" class="lozad" /></a>
+                <div class="e-images">
+                    <a href="https://www.elvey.co.za/" target="_blank"><img src="/images/elvey-logo.png" width="200"
+                            height="200" class="lozad" /><span>South Africa</span></a>
+                    <a href="https://secusafe.com.au/collections/ajax-accessories" target="_blank"><img
+                            src="/images/secusafe-logo.png" width="200" height="200"
+                            class="lozad" /><span>Australia</span></a>
+                </div>
             </div>
         </div>
     </div>
